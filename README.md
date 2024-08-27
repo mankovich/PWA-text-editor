@@ -15,6 +15,8 @@ The application features a number of data-persistence techniques that serve as r
 
 The application's URL is: [pwa-text-editor.onrender.com](pwa-text-editor.onrender.com) 
 
+The GitHub repository may be accessed at [this link.](https://github.com/mankovich/PWA-text-editor)
+
 ## Installation 
 
 Installation of the PWA version is straightforward. Simply click on the `Install` button located at the top left of the browser window and confirm that you wish to install when prompted. After install, a shortcup to the app will appear on the desktop. 
