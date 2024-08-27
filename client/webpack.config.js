@@ -19,18 +19,18 @@ module.exports = () => {
     },
     plugins: [
       //webpack plugin that generates HTML file
-      HtmlWebpackPlugin({
+      new HtmlWebpackPlugin({
         template: './index.html',
-        title: 'J.A.T.E.'
+        favicon: './favicon.ico'
       }),
 
       //injects custom service worker
       new InjectManifest({
         swSrc: './src-sw.js',
-        swDest: 'src-sw.js'
+        swDest: 'service-worker.js'
       }),
 
-      //creates a manifest,json file
+      //creates a manifest.json file
       new WebpackPwaManifest({
         fingerprints: false,
         inject: true,
@@ -43,9 +43,9 @@ module.exports = () => {
         publicPath: './',
         icons: [
           {
-            src: path.resolve('src/images/logo.png'),
+            src: path.resolve('./src/images/logo.png'),
             sizes: [96, 128, 192, 256, 384, 512],
-            destination: path.join('assets', 'icons'),
+            destination: path.join('./assets/', 'icons'),
           },
         ],
       })

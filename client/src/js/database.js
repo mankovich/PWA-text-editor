@@ -14,40 +14,20 @@ const initdb = async () =>
 
 export const putDb = async (content) => {
   console.log('put to the database');
-
-  //create connection to the database and version
   const jateDb = await openDB('jate', 1);
-
-  //create a new transaction and specify the database and data privileges
   const tx = jateDb.transaction('jate', 'readwrite');
-
-  //open the desired object store
   const store = tx.objectStore('jate');
-
-  //use the FIXME:
-  const request = store.add(content);
-
-  //get confirmation of the request
+  const request = store.put({id: 1, content: content});
   const result = await request;
   console.log('Data saved to the database', result);
 };
 
 export const getDb = async () => {
   console.log('GET from the database');
-
-  //create connection to the database and version
   const jateDb = await openDB('jate', 1);
-
-  //create a new transaction and specify the database and data privileges
   const tx = jateDb.transaction('jate', 'readonly');
-
-  //open the desired object store
   const store = tx.objectStore('jate');
-
-  //use FIXME: method to get one and then pass the record trying to get
-  const request = store.getAll();
-
-  //get confirmation of the request
+  const request = store.get(1);
   const result = await request;
   console.log('result.value', result);
   return result;
