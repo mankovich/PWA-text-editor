@@ -13,7 +13,7 @@ This is a text editor comprising a single-page web application that runs in the 
 
 The application features a number of data-persistence techniques that serve as redundancy in case one of the options is not supported by the user's browser. It also functions offline. The application stores and retrieves data on an IndexedDB database using the `idb` package. 
 
-The application's URL is: [pwa-text-editor.onrender.com](pwa-text-editor.onrender.com) 
+The application's URL is: [pwa-text-editor.onrender.com](pwa-text-editor-mod-19.onrender.com) 
 
 The GitHub repository may be accessed at [this link.](https://github.com/mankovich/PWA-text-editor)
 
